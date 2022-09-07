@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2022 Siemens AG
+# SPDX-License-Identifier: MIT
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @ThomasPiskol will be requested for
+# review when someone opens a pull request.
+*       @ThomasPiskol

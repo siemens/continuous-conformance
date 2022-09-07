@@ -1,0 +1,29 @@
+/*
+ * SPDX-FileCopyrightText: 2022 Siemens AG
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+@import "azure-devops-ui/Core/override.scss";
+
+#root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+
+.conformance-state-coloring-enabled {
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    width: 11px;
+    height: 11px;
+    float: left;
+    position: relative;
+}
+
+.conformance-page-content-spinner {
+    justify-content: center;
+    height: 100%;
+}

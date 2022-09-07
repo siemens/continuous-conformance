@@ -1,0 +1,28 @@
+{
+    "contributions": [
+        {
+            "id": "continuous-conformance-workitem-tab",
+            "type": "ms.vss-work-web.work-item-form-page",
+            "description": "Continuous Conformance Work Item Tab",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "Conformance",
+                "uri": "dist/WorkItemPage/index.html"
+            },
+            "constraints": [
+                {
+                    "name": "Feature",
+                    "properties": {
+                        "featureId": "ContinuousConformanceTeam.continuous-conformance-dev.feature-continuous-conformance"
+                    }
+                }
+            ]
+        }
+    ],
+    "scopes": [
+        "vso.work",
+        "vso.work_write"
+    ]
+}

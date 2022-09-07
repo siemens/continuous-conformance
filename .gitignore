@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2022 Siemens AG
+# SPDX-License-Identifier: MIT
+
+npm-debug.log
+node_modules/
+dist/
+*.vsix
+
+# JUNIT testresult
+test-results.xml
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+.profile

@@ -1,0 +1,61 @@
+// SPDX-FileCopyrightText: 2022 Siemens AG
+// SPDX-License-Identifier: MIT
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Launch Firefox",
+        "type": "firefox",
+        "request": "launch",
+        "url": "https://localhost:44300/",
+        "reAttach": true,
+        "pathMappings": [
+          {
+            "url": "webpack:///",
+            "path": "${workspaceFolder}/"
+          }          
+        ],
+        "profile": "vscode",
+        "keepProfileChanges": true,
+        "log": {
+          "fileName": "${localWorkspaceFolder}/vscode-firefox-debug.log",
+          "fileLevel": {
+            "default": "Debug"
+          },
+          "consoleLevel": {
+            "default": "Warn"
+          }
+        }
+      },
+      {
+        "name": "Gulp version",
+        "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+        "request": "launch",
+        "args": [
+          "version"
+        ],
+        "skipFiles": [
+          "<node_internals>/**"
+        ],
+        "type": "node"
+      },
+      {
+        "name": "Node test.ts",
+        "program": "${workspaceFolder}/test.ts",
+        "request": "launch",
+        "skipFiles": [
+          "<node_internals>/**"
+        ],
+        "type": "node"
+      },
+      {
+        "type": "pwa-chrome",
+        "request": "launch",
+        "name": "Launch Chrome",
+        "url": "https://localhost:44300/"
+      }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "contributions": [
+        {
+            "id": "continuous-conformance-config-hub",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-web.project-admin-hub-group"
+            ],
+            "includes": [
+                "ms.vss-tfs-web.tfs-page-data-service",
+                "ms.vss-features.host-navigation-service",
+                "ms.vss-features.extension-data-service",
+                "ms.vss-features.host-dialog-service"
+            ],
+            "properties": {
+                "name": "Continuous Conformance",
+                "uri": "dist/ProjectSettings/index.html",
+                "supportsMobile": true
+            },
+            "constraints": [
+                {
+                    "name": "Feature",
+                    "properties": {
+                        "featureId": "ContinuousConformanceTeam.continuous-conformance-dev.feature-continuous-conformance"
+                    }
+                }
+            ]
+        }
+    ]
+}

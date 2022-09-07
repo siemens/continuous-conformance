@@ -1,0 +1,64 @@
+{
+    "manifestVersion": 1,
+    "id": "continuous-conformance",
+    "publisher": "ContinuousConformanceTeam",
+    "version": "0.1.34",
+    "name": "Continuous Conformance",
+    "description": "Azure DevOps Extension",
+    "categories": [
+        "Azure Boards"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "img/logo.png"
+    },
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+    "links": {
+        "home": {
+            "uri": "https://github.com/siemens/continuous-conformance"
+        },
+        "repository": {
+            "uri": "https://github.com/siemens/continuous-conformance"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/siemens/continuous-conformance"
+    },
+    "badges": [
+        
+    ],
+    "files": [
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "img",
+            "addressable": true
+        }
+    ],
+    "contributions": [
+        {
+            "id": "feature-continuous-conformance",
+            "type": "ms.vss-web.feature",
+            "description": "Enable Continuous Conformance Tab in Work-Item Editor and Project Settings.",
+            "targets": [ "ms.vss-web.managed-features", "ms.vss-web.managed-features-onprem" ],
+            "properties": {
+                "name": "Continuous Conformance",
+                "userConfigurable": true,
+                "hostConfigurable": true,
+                "defaultState": false,
+                "hostScopes": ["project", null]
+            }
+        }
+    ]
+}

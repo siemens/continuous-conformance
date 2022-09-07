@@ -1,0 +1,39 @@
+// SPDX-FileCopyrightText: 2022 Siemens AG
+// SPDX-License-Identifier: MIT
+
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/typescript-node
+{
+	"name": "Node.js & TypeScript",
+	"dockerFile": "Dockerfile",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {},
+
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"ms-azure-devops.azure-pipelines",
+		"ms-azuretools.vscode-docker",
+		"hediet.vscode-drawio",
+		"jfrog.jfrog-vscode-extension",
+		"sonarsource.sonarlint-vscode",
+		"ms-vscode.azure-account"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		44300
+	],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "",
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node",
+
+	"containerEnv": {
+		"AZURE_DEVOPS_PUBLISH_EXTENSION_TOKEN": "${localEnv:AZURE_DEVOPS_PUBLISH_EXTENSION_TOKEN}"
+	}
+}
