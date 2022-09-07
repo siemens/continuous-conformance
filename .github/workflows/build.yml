@@ -30,7 +30,7 @@ jobs:
             gulp ${{ matrix.targetEnvironment }}
   
       - name: Publish ${{ matrix.targetEnvironment }}
-      - uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.targetEnvironment }}
           path: $GITHUB_WORKSPACE/package/
