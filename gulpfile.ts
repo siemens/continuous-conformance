@@ -128,7 +128,7 @@ export const dev = series(
     createPackageDev
 );
 
-const prod = series(
+export const prod = series(
     parallel(
         version,
         series(
