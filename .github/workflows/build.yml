@@ -25,7 +25,12 @@ jobs:
           # Change this to point to your image name
           imageName: ghcr.io/siemens/continuous-conformance-devcontainer
           # Change this to be your CI task/script
+          env: |
+            GITHUB_ACTIONS
+            GITHUB_ENV
+            GITHUB_REF
           runCmd: |
+            env | sort -f
             npm ci
             gulp ${{ matrix.targetEnvironment }}
   
@@ -34,7 +39,4 @@ jobs:
         with:
           name: ${{ matrix.targetEnvironment }}
           path: $GITHUB_WORKSPACE/package/
-          env: |
-            GITHUB_ACTIONS
-            GITHUB_ENV
-            GITHUB_REF
+
