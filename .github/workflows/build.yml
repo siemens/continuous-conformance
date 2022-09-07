@@ -34,3 +34,7 @@ jobs:
         with:
           name: ${{ matrix.targetEnvironment }}
           path: $GITHUB_WORKSPACE/package/
+          env: |
+            GITHUB_ACTIONS=${{ env.GITHUB_ACTIONS }}
+            GITHUB_ENV=${{ env.GITHUB_ENV }}
+            GITHUB_REF=${{ env.GITHUB_REF }}
