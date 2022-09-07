@@ -41,5 +41,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.targetEnvironment }}
-          path: $GITHUB_WORKSPACE/package/
-
+          path: package/
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
