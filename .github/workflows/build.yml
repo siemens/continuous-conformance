@@ -6,7 +6,7 @@ jobs:
 
     strategy:
       matrix:
-        targetEnvironment: [prod]
+        targetEnvironment: [prod, stage, dev]
 
     steps:
       - name: Check out repository code
