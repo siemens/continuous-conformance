@@ -1,0 +1,36 @@
+name: Build
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        targetEnvironment: [prod]
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1 
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and run dev container task
+        uses: devcontainers/ci@v0.2
+        with:
+          # Change this to point to your image name
+          imageName: ghcr.io/example/example-devcontainer
+          # Change this to be your CI task/script
+          runCmd: |
+            npm ci
+            gulp ${{ matrix.targetEnvironment }}
+  
+      - name: Publish ${{ matrix.targetEnvironment }}
+      - uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.targetEnvironment }}
+          path: $GITHUB_WORKSPACE/package/
