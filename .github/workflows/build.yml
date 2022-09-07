@@ -23,7 +23,7 @@ jobs:
         uses: devcontainers/ci@v0.2
         with:
           # Change this to point to your image name
-          imageName: ghcr.io/example/example-devcontainer
+          imageName: ghcr.io/siemens/continuous-conformance-devcontainer
           # Change this to be your CI task/script
           runCmd: |
             npm ci
